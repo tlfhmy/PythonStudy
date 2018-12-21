@@ -51,9 +51,6 @@ while(True):
         num *= (i[1] + 1)
     #print(fac,num)
     if(num > 500):
-        sol = 1
-        for i in fac:
-            sol *= (i[0] ** i[1])
         print(f"第{m}个三角形数为{int(m*(m+1)/2)},它的素分解为:")
         print(fac)
         print(f"可知,它具有{num}个因子")

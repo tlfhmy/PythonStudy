@@ -1,3 +1,5 @@
+from functools import reduce
+
 a = "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08\
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00\
 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65\
@@ -19,10 +21,13 @@ a = "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08\
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54\
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"
 
-pp = int(len(a) / 20)
-b = []
-c = []
-d = []
+
+#以下为字符串处理，将它转换为20x20矩阵
+#-------------------------------------------------------------------
+pp = int(len(a) / 20)   #计算每行的字符数
+b = []                  #将字符串分割为20行并存于此出
+c = []                  #将b中每行的字符串分割为单个的20x20矩阵数字字符串
+d = []                  #将c中每个数字字符串转换为数字
 
 for i in range(0,20):
     b.append(a[pp*i:pp*(i+1)])
@@ -38,5 +43,49 @@ for i in b:
 
 for i in range(0,len(c)):
     d.append(list(map(lambda p: int(p),c[i])))
-    
-print(d[2][5])
+
+#-------------------------------------------------------------------
+
+#以下为数据处理
+#-------------------------------------------------------------------
+products = []                           #此处存储局部最大值
+for i in d:                                #此循环计算矩阵中横向4个连续元素的积的局部最大值，并将其存储在products中
+    temp=[]
+    for j in range(0,len(i)-3):
+        temp.append(i[j:j+4])
+    products.append(max(list(map(lambda p: reduce(lambda x,y: x*y ,p),temp))))      #此处利用lambda函数和map方法计算连续元素的积
+
+e = d                               #该循环构造矩阵d的转置矩阵
+for i in range(0,20):
+    for j in range(0,20):
+        e[i][j] = d[j][i]
+
+for i in e:                         #对转置矩阵利用横向局部最大值方法，便可计算纵向连续4元素的局部最大值，并存储于products中
+    temp=[]
+    for j in range(0,len(i)-3):
+        temp.append(i[j:j+4])
+    products.append(max(list(map(lambda p: reduce(lambda x,y: x*y ,p),temp))))
+
+for i in range(0,len(d)-3):                             #此循环计算正斜对角连续四元素的局部最大值，并存储与products中
+    tmp=[]
+    for j in range(0,len(d)-3):
+        tp1=[]
+        tp1.append(d[i][j])
+        tp1.append(d[i+1][j+1])
+        tp1.append(d[i+2][j+2])
+        tp1.append(d[i+3][j+3])
+        tmp.append(tp1)
+    products.append(max(list(map(lambda p: reduce(lambda x,y: x*y ,p),tmp))))
+
+for i in range(0,len(d)-3):                            #此循环计算反斜对角连续四元素的局部最大值，并存储与products中
+    tmp=[]
+    for j in range(0,len(d)-3):
+        tp1=[]
+        tp1.append(d[i+3][j])
+        tp1.append(d[i+2][j+1])
+        tp1.append(d[i+1][j+2])
+        tp1.append(d[i][j+3])
+        tmp.append(tp1)
+    products.append(max(list(map(lambda p: reduce(lambda x,y: x*y ,p),tmp))))
+
+print(max(products))

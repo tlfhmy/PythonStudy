@@ -68,6 +68,6 @@ def FactorInteger(num):
 
 #---------------------制成某种整数列表--------------------
 def Table(func,start,end):
-    return(list(map(func,range(start,end))))
+    return(list(map(func,range(start,end + 1))))
 
 #--------------------

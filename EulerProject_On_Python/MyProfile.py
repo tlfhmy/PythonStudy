@@ -1,5 +1,15 @@
 from functools import reduce
 
+
+#------------------------数学阶乘数----------------------------
+def Factorial(num):
+    if(num > 0):
+        return reduce(lambda x,y: x*y,range(1,num + 1))
+    elif(num == 0):
+        return 1
+    else:
+        print("Error")
+        return -1
 #------------------------数学组合数----------------------------
 def Conbinnum(num1,num2):
     if(num1 == num2):
@@ -70,4 +80,6 @@ def FactorInteger(num):
 def Table(func,start,end):
     return(list(map(func,range(start,end + 1))))
 
-#--------------------
+#---------------------给出数字的数码列表------------------
+def IntegerDigits(num):
+    return list(map(int,list(str(num))))

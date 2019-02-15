@@ -46,6 +46,7 @@ def PrimeNumber(num):
     return b
 
 #----------------------给出指定整数的素分解--------------------
+#请输入不小于2的正整数
 def FactorInteger(num):
     fac = []
     isFirst = True

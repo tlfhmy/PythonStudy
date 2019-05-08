@@ -1,4 +1,16 @@
 from copy import deepcopy
+
+
+#           Error Code Table            #
+#---------------------------------------#
+#|Error Code 0  | 矩阵初始化数据类型错误
+#|Error Code 1  | 矩阵初始化数据形式错误
+#|Error Code 2  |
+#|Error Code 3  |
+#---------------------------------------
+
+
+
 class Matrix(object):
     def __init__(self,b):
         if type(b) == list:
@@ -27,7 +39,13 @@ class Matrix(object):
     def show(self):
         print("Matrix(")
         for i in self.body:
-            print(i)
+            print("[",end="")
+            for j in range(0,len(i)):
+                if j != len(i) - 1:
+                    print("%10.3f"%i[j],end="")
+                else:
+                    print("%10.3f     "%i[j],end="")
+            print("]")
         print(")")
     
     def GetRoCo(self):
@@ -45,24 +63,42 @@ class Matrix(object):
                             temp = deepcopy(OM.body[i])
                             OM.body[i] = deepcopy(OM.body[ss])
                             OM.body[ss] = deepcopy(temp)
+
+                            temprm = deepcopy(RM.body[i])
+                            RM.body[i] = deepcopy(RM.body[ss])
+                            RM.body[ss] = deepcopy(temprm)
+
                             NotZeroFound = True
                             break
                     if(not(NotZeroFound)):
                         print("ReverseMatrix does not exist.")
                         return Matrix([[]])
-                else:
-                    valfir = OM.body[ss][ss]
-                    for i in range(ss+1, len(OM.body)):
-                        valfi = OM.body[i][ss]
-                        for j in range(0,len(OM.body)):
-                            OM.body[i][j] -= valfi/valfir*OM.body[ss][j]
-                    
-            return OM
+                valfir = OM.body[ss][ss]
+                for i in range(ss+1, len(OM.body)):
+                    valfi = OM.body[i][ss]
+                    for j in range(0,len(OM.body)):
+                        OM.body[i][j] -= valfi/valfir*OM.body[ss][j]
 
+                        RM.body[i][j] -= valfi/valfir*RM.body[ss][j]
+            
+            for k in range(len(OM.body)-1, 0-1, -1):
+                for j in range(k-1,0-1,-1):
+                    lstelm = OM.body[k][k]
+                    opeelm = OM.body[j][k]
+                    for i in range(0, len(OM.body[0])):
+                        OM.body[j][i] -= opeelm/lstelm*OM.body[k][i]
 
+                        RM.body[j][i] -= opeelm/lstelm*RM.body[k][i]
+
+            for i in range(0, len(OM.body)):
+                tp = OM.body[i][i]
+                for j in range(0, len(OM.body[0])):
+                    OM.body[i][j] /= tp
+                    RM.body[i][j] /= tp              
+            return RM
         else:
             print("Error Code 3!")  #非方阵不能求逆矩阵。
     
-a = Matrix([[1,2,7,1,1],[2,1,3,3,4],[5,1,3,2,7],[8,6,3,1,3],[2,5,3,1,3]])
+a = Matrix([[1,3,7,12],[3,1,3,5],[5,7,6,9],[5,0,3,3]])
 b = a.ReverseMatrix()
 b.show()

@@ -1,0 +1,222 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=latex 2018.11.29)  4 MAY 2019 14:32
+entering extended mode
+**./int.tex
+(int.tex
+LaTeX2e <2018-04-01> patch level 5
+("C:\Users\TangLin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
+"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Users\TangLin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+
+! LaTeX Error: Environment  undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \begin{}
+            
+? 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3   $
+       $
+? 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Missing \endcsname inserted.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+? 
+! Emergency stop.
+<to be read again> 
+                   \def 
+l.6 \end{}
+          
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 216 strings out of 492971
+ 2372 string characters out of 3125731
+ 58918 words of memory out of 3000000
+ 4174 multiletter control sequences out of 15000+200000
+ 6376 words of font info for 23 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 29i,2n,28p,120b,69s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

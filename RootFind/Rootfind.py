@@ -1,7 +1,7 @@
 from math import sin
 def f(x):
-    return sin(x)+2.7182818**x
-
+    return x**2-1
+    
 esp = 1e-10                                                 #设置误差限，即绝对值小于esp的两数当成“相等”。
 
 root = []

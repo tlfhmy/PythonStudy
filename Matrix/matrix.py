@@ -5,8 +5,8 @@ from copy import deepcopy
 #---------------------------------------#
 #|Error Code 0  | 矩阵初始化数据类型错误
 #|Error Code 1  | 矩阵初始化数据形式错误
-#|Error Code 2  |
-#|Error Code 3  |
+#|Error Code 2  | 非方阵不能求逆矩阵
+#|Error Code 3  | 
 #---------------------------------------
 
 
@@ -97,7 +97,7 @@ class Matrix(object):
                     RM.body[i][j] /= tp              
             return RM
         else:
-            print("Error Code 3!")  #非方阵不能求逆矩阵。
+            print("Error Code 2!")  #非方阵不能求逆矩阵。
     
 a = Matrix([[1,3,7,12],[3,1,3,5],[5,7,6,9],[5,0,3,3]])
 b = a.ReverseMatrix()

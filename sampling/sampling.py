@@ -8,7 +8,7 @@ n = int(input("请输入样本总数:"))
 for i in range(0,n):
     fProp.append(float(input(f"请输入第{i+1}个样本的概率：")))
 
-fSumProp = 0.0
+fSumProp = 0.0                                          #代表分布概率
 bCoreProp = True
 for i in fProp:
     if i < 0.0:

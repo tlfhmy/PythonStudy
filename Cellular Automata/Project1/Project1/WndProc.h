@@ -7,9 +7,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	HDC hdc;
 	TEXTMETRIC tm;
 	static HWND button[3];
-	//static PTCHAR szBtName[] = { TEXT("Heap Sort"),TEXT("***Sort"),TEXT("***Sort") };
 
-
+	TCHAR lptemp[1024];
 
 	switch (msg)
 	{
@@ -27,9 +26,19 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		icx = LOWORD(lParam);
 		icy = HIWORD(lParam);
 
-		//MessageBox(NULL,TEXT())
+		//wsprintf(lptemp, "Length of window:%d,\nHight of window:%d", icx, icy);
+		//MessageBox(NULL, lptemp, "Action", MB_OK);
 		break;
 
+	case WM_PAINT:
+		hdc = GetWindowDC(hwnd);
+
+		MoveToEx(hdc, icx / 2, icy / 2, NULL);
+		LineTo(hdc, icx, icy);
+
+		ReleaseDC(hwnd, hdc);
+
+		break;
 	case WM_DESTROY:
 
 		PostQuitMessage(0);
